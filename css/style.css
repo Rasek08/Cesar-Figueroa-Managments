@@ -1,0 +1,363 @@
+* {  /* ----- VALORES UNIVERSALES ----- */
+    font-family: "Poppins"; /* Establece la fuente principal */
+    box-sizing: border-box; /* Hace que el padding y el border se incluyan en el tamaño total de los elementos */
+    margin: 0; /* Elimina el margen por defecto de los elementos */
+    padding: 0; /* Elimina el padding por defecto de los elementos */
+}
+
+body { /* ----- CUERPO DE LA PÁGINA ----- */
+    display: flex; /* Usa flexbox para organizar el contenido */
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el body ocupe al menos la altura de la ventana */
+    margin: 0; 
+    padding: 0; 
+}
+
+header {  
+    display: grid; 
+    grid-template-columns: auto 1fr;
+    align-items: center; /* Centra verticalmente los elementos del header */
+    background-color: #000000; /* Color inicial del header */
+    box-shadow: 0px 2px 1rem #FF8C00; /* Sombra naranja del header */
+    padding: 1rem; /* Espaciado interno del header */
+    transition: background-color 0.3s ease, position 0.3s ease; /* Transiciones del header*/
+    position: relative; /* Posición relativa por defecto */
+    z-index: 1000; /* Asegura que el header esté encima de otros elementos */
+}
+
+header.scrolled {
+    position: fixed; /* Fija el header en la parte superior al bajar */
+    top: 0; /* Se alinea arriba de la ventana */
+    left: 0; 
+    right: 0; 
+    background-color: #ffffff; /* Color de fondo al hacer scroll */
+    box-shadow: 1rem rgb(255, 140, 0); /* Sombra naranja */
+}
+
+header.scrolled .logo-text {
+    color: black; /* Color del texto al hacer scroll */
+}
+
+.logo {
+    display: flex; /* Usa flexbox para alinear el logo */
+    align-items: center; /* Centra verticalmente el logo */
+}
+
+.logo-text { /* ----- TEXTO "CÉSAR FIGUEROA MANAGMENTS ----- */
+    font-size: 1rem; /* Tamaño del texto */
+    margin-left: 0.625rem; /* Espaciado entre el logo y el texto */
+    color: white; 
+}
+
+nav { /* ----- ORDEN DEL MENU ----- */
+    justify-self: end; /* Coloca el contenido del nav al final */
+}
+
+nav ul { /* ----- LISTA DEL MENU  ----- */
+    font-weight: 400;
+    display: flex; /* Usa flexbox para la lista de navegación */
+    list-style: none; /* Elimina los puntos de la lista */
+}
+
+nav li { /* ----- ITEMS DEL MENU ----- */
+    margin-left: 1.5rem; /* Espaciado entre elementos de la lista */
+}
+
+nav a { /* ----- TEXTO DEL MENU ----- */
+    color: white; /* Color del texto en el estado inicial */
+    text-decoration: none; /* Elimina el subrayado por defecto */
+    transition: color 0.3s ease; /* Transición suave para el color del texto */
+}
+
+header.scrolled nav a { /* ----- MENU AL DESPLAZARSE ----- */
+    color: black; /* Cambia a negro cuando se hace scroll */
+}
+
+nav a:hover { /* ----- ANIMACIÓN DE LOS ELEMENTOS DEL MENU ----- */
+    text-decoration: underline; /* Subraya el texto */
+    color: #FF8C00; /* Cambia el color del texto */
+}
+
+main { 
+    flex-grow: 1; /* Permite que el main crezca para ocupar espacio disponible */
+    position: relative;
+}
+
+section {
+    text-align: center; /* Centra el texto dentro de las secciones */
+    color: #ffffff; /* Color del texto */
+    padding: 0; /* Elimina el padding para evitar espacios */
+    margin: 0; /* Elimina el margen para evitar espacios */
+    flex-grow: 1; /* Permite que las secciones crezcan */
+    font-size: 1rem; /* Tamaño de la fuente */
+}
+
+footer {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    text-align: center;
+    color: #fff; 
+    background: rgba(0, 0, 0);
+    margin-top: 0; 
+}
+
+.redes {
+    display: inline-block; /* Permite que los elementos se alineen horizontalmente */
+    margin: 1rem; /* Espaciado alrededor de las redes sociales */
+    user-select: none; /* Evita que el usuario seleccione las redes para que no se vean lineas entre los íconos */
+}
+
+.redes a{
+    margin: 0 5px;
+}
+
+.terminos a { 
+    color: white; /* Cambia el color a blanco */
+    text-decoration: none; /* Elimina el subrayado */
+}
+
+/* ----- CAJA 1 (PRESENTACIÓN) ----- */
+
+.inicio {
+    display: flex; /* Usa flexbox para alinear los elementos en línea */
+    justify-content: space-between; /* Espacio entre los elementos */
+    align-items: center; /* Centra verticalmente los elementos */
+    padding: 2rem; /* Espaciado interno para la sección */
+}
+
+.imagen{
+    max-width: 30vw; /* Ajusta el tamaño máximo de la imagen en vw */
+    height: auto; /* Mantiene la proporción de la imagen */
+    filter: drop-shadow(2px 2px 5px #000000bb);
+}
+
+.caja1 {
+    padding: 5% 7%;
+    text-align: left;
+    color: #003366;
+    text-shadow: 0.125rem 0.125rem 0.1800rem rgba(0, 0, 0, 0.5);
+}
+
+.caja1 h2 {
+    font-weight: 600;
+    font-size: 1.30rem; /* Tamaño de la fuente */
+    text-shadow: 0.0625rem 0.0625rem 0.0625rem rgba(0, 0, 0, 0.3); /* Sombra para el texto */
+    margin-bottom: 1rem;
+}
+
+.caja1 p {
+    font-size: 2.2rem; /* Tamaño del texto */
+    padding-right: 10%; /* Espaciado a la derecha */
+    font-weight: 600; /* Grosor de la fuente */
+}
+
+.community-manager { /* ----- SECCIÓN COMMUNITY MANAGER ----- */
+    background-color: #003366; /* Color de fondo para la sección de community manager */
+    color: #ffffff; /* Color del texto */
+    padding: 2.5rem 5rem 2.5rem 5rem;
+}
+
+.caja2 h3 {
+    color: #FF8C00;
+    margin: 7vh 10vw;
+    font-weight: 600;
+    font-size: 2rem; 
+    text-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.5); /* Sombra para el texto */
+}
+
+.caja2 .txt1 {
+    margin: 5vh;
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding-bottom: 2%;
+    text-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.5); /* Sombra para el texto */
+}
+
+.caja2 .txt2 {
+    color: #A4D65E;
+    font-size: 1.5rem; /* Tamaño del texto */
+    font-weight: 600; /* Grosor de la fuente */
+    text-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.5); /* Sombra para el texto */
+}
+
+.boton {
+    background-color: #FF8C00;
+    color: #ffffff;
+    border: none; /* Sin borde */
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 500; 
+    cursor: pointer; /* Cambiar cursor al pasar por encima */
+    margin-top: 2rem; /* Espacio arriba del botón */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0s; /* Transición suave para el color de fondo */
+}
+
+.boton:hover {
+    background-color: #A4D65E; /* Color de fondo al pasar por encima */
+}
+
+/* ----- PAGINA DE PROYECTOS ------ */
+
+.galeria {  /* ----- ORDEN DE LAS TARJETAS ------ */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 3rem;
+    padding: 3rem 5rem; /* Padding para evitar que las imágenes se peguen a los bordes y al título (.titulo-proyectos) */
+}
+
+.proyectos { /* ----- ESTILO DE LAS TARJETAS ------ */
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+    color: #000000;
+    transition: transform 0.3s;
+    box-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.5);
+}
+
+.galeria .proyectos img { /* ----- IMAGENES DE LOS PROYECTOS ----- */
+    width: 100%; /* 100% para que la imagen ocupe el ancho completo del contenedor */
+    height: auto;
+    display: block; /* Evita espacio extra debajo de la imagen */
+}
+
+.pagina-proyectos h2{ /* ----- TITULO "CONOCE ALGUNOS DE MIS PROYECTOS" ----- */
+    margin-top: 3rem;
+    text-align: center;
+    color: #000000
+}
+
+.proyectos h3 { /* ----- TITULO DE LAS TARJETAS ----- */
+    margin: 10px 0;
+}
+
+.proyectos p { /* ----- TEXTO DE LAS TARJETAS ----- */
+    padding: 0 10px 10px;
+}
+
+.proyectos:hover { /* ----- ANIMACION DE LAS TARJETAS ----- */
+    transform: scale(1.05); /* Aumenta la escala del contenedor al pasar el cursor por encima */
+}
+
+/* ----- SECCION HERRAMIENTAS ----- */
+
+.herramientas-lenguajes { /* ----- SECCION COMPLETA ----- */
+    background-color: #003366; /* Color de fondo */
+    padding: 20px 0;
+    margin: 0;
+}
+
+.herramientas-lenguajes h3{ /* ----- TITULO "HERRAMIENTAS QUE UTILIZO ----- */
+    text-align: center;
+    color: #ffffff;
+}
+
+.herramientas-lenguajes h4{ /* ------ TITULO "LENGUAJES DE MARCADO Y PROGRAMACION ----- */
+    color:#000000
+}
+
+
+.herramientas, .languages { /* ----- ORDEN DE LAS TARJETAS ----- */
+    display: flex;
+    justify-content: center; /* Centra las tarjetas */
+    flex-wrap: wrap; /* Permite que se ajusten en caso de zoom */
+    margin: 20px 0;
+}
+
+.tarjetas { /* ----- ESTILO DE LAS TARJETAS ------ */
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0.125rem 0.125rem 0.2rem rgb(0, 0, 0);
+    margin: 1rem;
+    padding: 10px;
+    text-align: center;
+    width: 150px;
+    height: 200px;
+    transition: transform 0.3s; /* Efecto suave al pasar el mouse */
+}
+
+.tarjetas img { /* ----- IMAGEN DE LAS TARJETAS -----*/
+    width: 100%; /* Ajusta las imagenes al ancho de la tarjeta */
+    height: 120px;
+    border-radius: 5px 5px 0 0; /* Bordes redondeados en la parte superior */
+}
+
+.tarjetas:hover { /* ----- ANIMACION DE LAS TARJETAS ----- */
+    transform: translateY(-5px); /* Efecto al pasar el cursor por encima */
+}
+
+/* ----- BLOG ----- */
+.biografia {
+    padding: 5% 15%;
+    color: #003366;
+    text-shadow: 0.125rem 0.125rem 0.1800rem rgba(0, 0, 0, 0.5);
+}
+
+.biografia h2 {
+    font-weight: 600;
+    font-size: 1.30rem; /* Tamaño de la fuente */
+    text-shadow: 0.0625rem 0.0625rem 0.0625rem rgba(0, 0, 0, 0.3); /* Sombra para el texto */
+    margin-bottom: 1rem;
+}
+
+.biografia p {
+    font-size: 2.4rem; /* Tamaño del texto */
+    font-weight: 600; /* Grosor de la fuente */
+}
+
+
+/* ----- SECCION EXPERIENCIA LABORAL ----- */
+
+.experiencia{
+    padding: 0rem 10rem;
+}
+
+.experiencia h3{
+    padding-top: 2rem;
+    text-align: center;
+    color: #FF8C00;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.experiencia .ADC{
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding-bottom: 1rem;
+}
+
+.experiencia .sub{
+    text-align: left;
+    font-size: 1.3rem;
+    color: #A4D65E;
+    font-weight: 600;
+}
+
+.experiencia p{
+    text-align: left;
+    font-size: 1.1rem;
+    padding-bottom: 2rem;
+}
+
+.experiencia ol{
+    text-align: left;
+    font-size: 1.1rem;
+    padding-bottom: 3rem;
+}
+
+/* ----- SECCION DE IDIOMAS ----- */
+
+.idiomas{
+    font-size: 1.3rem;
+    padding: 3rem 0rem;
+    background-color: #A4D65E;
+    color: #000000;
+    text-align: center;
+}
+
+.flecha{ /* ----- ANCLA ----- */
+    padding-top: 2rem;
+}

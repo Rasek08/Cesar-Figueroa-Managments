@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> César Figueroa Managments </title>
+    <link rel="stylesheet" href="css/style.css"> <!-- AGREGAR S -->
+    <!-- POPPINS FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="website icon" type="icon" href="img/CF icono.ico"> <!-- AGREGAR ICONO A LA PAGINA -->
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img id="logo" src="img/CF Blanco PNG.png" width="60px" title="César Figueroa Managments"> 
+            <h1 class="logo-text">CÉSAR FIGUEROA MANAGMENTS</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" title="Inicio">Inicio</a></li>
+                <li><a href="proyectos.html" title="Proyectos">Proyectos</a></li>
+                <li><a href="blog.html" title="Blog">Blog</a></li>
+                <li><a href="https://taplink.cc/cesarfigueroa" title="Contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <section>
+                <div id="inicio" class="biografia">
+                    <h2> Hola, me presento! </h2>
+                    <p class="Presentacion"> Soy César Figueroa, un joven con gran motivación para crecer profesionalmente, y adquirir nuevas experiencias laborales con el fin de progresar. </p>
+                    <p>Me desempeño como Community Manager, Desarrollador Web y Diseñador Multimedia.</p>
+                    <p>Mi pasión es conectar marcas con su audiencia de manera auténtica y efectiva. </p>
+                    <button class="boton" onclick="window.location.href='mailto:work.cesarfigueroa@gmail.com'">Contactame</button>
+                </div>
+            </section>
+            <section class="herramientas-lenguajes">
+                <div class="experiencia">
+                    <h3>MI EXPERIENCIA LABORAL</h3>
+                    <h4 class="ADC">ANALISISTA DE DATOS COMERCIALES</h4>
+                    <h4 class="sub"> Descripción del puesto: </h4>
+                        <p>Como Analista de Datos Comerciales fui responsable de extraer, filtrar y organizar información de contactos de socios, clientes y empresas desde una base de datos especializada, aplicando criterios y filtros específicos para atender las necesidades del equipo de ventas o marketing.</p>
+                    <h4 class="sub">Funciones principales:</h4>
+                    <ol>
+                        <li>Búsqueda de Información: Utilizar la base de datos para buscar información de empresas y clientes que cumplan con los criterios establecidos.</li>
+                        <li>Filtrado y Verificación: Asegurarse de que la información recopilada sea precisa y relevante.</li>
+                        <li>Compilación de Datos: Organizar la información en formatos como Word, Excel o Google Sheets, generando listas o reportes claros y estructurados.</li>
+                        <li>Análisis: Realizar un análisis de los datos para identificar patrones o insights que puedan ser útiles.</li>
+                        <li>Envío de Reportes: Preparar y enviar la documentación final al superior, asegurándose de que cumpla con los estándares requeridos.</li>
+                        <li>Colaboración Remota: Trabajar en estrecha colaboración con el equipo de forma remota, manteniendo una comunicación efectiva y eficiente.</li>
+                    </ol>
+            </section>
+            <section class="idiomas">
+                <div>
+                    <h3>IDIOMAS</h3>
+                    <p> Español - Nativo </p>
+                    <p> Inglés - Intermedio B1</p>
+                    <p> Portugués - Básico A1 </p>
+                </div>
+                <div class="flecha">
+                <a href="#inicio" title="Inicio"> <img src="img/flecha.png" width="30px"></a>
+                </div>
+            </section>
+        </article>
+    </main>
+    <footer>
+        <p title="Autor">CÉSAR FIGUEROA MANAGMENTS</p>
+        <p title="Derechos reservados."> Copyright 2024 &copy; Todos los derechos reservados. </p>
+        <div class="redes">
+            <a href="https://www.linkedin.com/in/figueroa-cesar/"><img src="img/LinkedIn_Logo.png" alt="LinkedIn" width="30px" title="LinkedIn"></a>
+            <a href="https://twitter.com/nike"><img src="img/Twitter Logo.png" alt="Twitter" width="30px" title="Twitter"></a>
+            <a href="https://instagram.com/rasek08/"><img src="img/Instagram Logo.png" alt="Instagram" width="30px" title="Instagram"></a>
+            <a href="https://www.facebook.com/profile.php?id=100009241858789"><img src="img/Facebook.png" alt="Facebook" width="30px" title="Facebook"></a>
+            <a href="mailto:work.cesarfigueroa@gmail.com"> <img src="img/email.png" alt="Email" width="30px" title="Email"></a>
+            <p> +54 9 2352 50-9124 </p>
+        </div>
+        <div class="terminos">
+            <a href="terminos.html" title="Términos y Condiciones"> Términos y Condiciones</a>
+        </div>
+    </footer>
+</body>
+<script>
+    window.addEventListener('scroll', function() {
+    const header = document.querySelector('header');
+    const logo = document.getElementById('logo'); 
+    const logoText = document.querySelector('.logo-text'); // Selecciona el texto del logo
+
+    if (window.scrollY > 0) {
+        header.classList.add('scrolled');
+        logo.src = 'img/CF Azul.png'; /* Cambia a la imagen al desplazarse */
+    } else {
+        header.classList.remove('scrolled');
+        logo.src = 'img/CF Blanco PNG.png'; /* Vuelve a la imagen inicial */
+    }
+});
+</script>
+<script src="//taplink.cc/id:12445746/widget/" async></script> <!-- Widget de Taplink -->
+</html>
